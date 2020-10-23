@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route} from 'react-router-dom'
 import './App.css';
+import HierarchicalTree from './components/screens/HierarchicalTree'
+import SortByDateTime from './components/screens/SortByDateTime';
+import ToDo from './components/screens/ToDo'
+import Vehicle from './components/screens/Vehicle';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Route path="/hierarchical-tree">
+        <HierarchicalTree />
+      </Route>
+      <Route path="/sort-by-datetime">
+        <SortByDateTime />
+      </Route>
+
+      <Route path="/todo">
+        <ToDo />
+      </Route>
+      <Route path="/vehicle">
+        <Vehicle />
+      </Route>
+    </BrowserRouter>
   );
 }
 

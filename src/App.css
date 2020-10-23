@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.dropdown-content{
+  width: 100px !important;
+}
+a:{
+  color: black !important;
+}
